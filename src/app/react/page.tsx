@@ -54,21 +54,21 @@ function Page() {
   return (
     <div className='w-full mt-5 flex items-center flex-col'>
       <div className='text-4xl mb-7'>React Timer</div>
-      <div className='flex gap-5'>
+      <div className='flex gap-5 items-center'>
         <div>Minutes: </div>
-        <input className='text-black' value={minutes} type='number' onChange={(e) => setMinutes(e.target.value ? Number(e.target.value): '')} />
+        <input className='text-black rounded-lg h-8' value={minutes} type='number' onChange={(e) => setMinutes(e.target.value ? Number(e.target.value): '')} />
         <div>Seconds: </div>
-        <input className='text-black' value={seconds} type='number' onChange={(e) => setSeconds(e.target.value ? Number(e.target.value): '')} />
+        <input className='text-black rounded-lg h-8' value={seconds} type='number' onChange={(e) => setSeconds(e.target.value ? Number(e.target.value): '')} />
       </div>
       <div className='flex gap-3 mt-5'>
-        <button className='border rounded-lg border-white p-2 w-24' onClick={isStarted ? stopTimer : startTimer}>{isStarted ? 'Stop' : 'Start'}</button>
-        <button className='border rounded-lg border-white p-2 w-24' onClick={() => {
+        <button className='border rounded-lg border-white p-2 w-32' onClick={isStarted ? stopTimer : startTimer}>{isStarted ? 'Stop' : 'Start'}</button>
+        <button className='border rounded-lg border-white p-2 w-32' onClick={() => {
           if (!isPaused) {
             setPausedTime((Number(minutes) ?? 0) * 60 + (Number(seconds) ?? 0) + passedTime)
           }
           setIsPaused(p => !p)
-        }}>{isPaused ? 'Resume' : 'Pause'}</button>
-        <button className='border rounded-lg border-white p-2 w-24' onClick={() => {
+        }}>{isPaused ? 'Unfreeze' : 'Freeze Time'}</button>
+        <button className='border rounded-lg border-white p-2 w-32' onClick={() => {
           setPassedTime(0);
           clearInterval(timer.current);
           setIsStarted(false);
@@ -78,13 +78,13 @@ function Page() {
       <div className='border w-full mt-14 box-border p-5'>
         <div className='text-4xl'>Problem Statements</div>
         <ul className='pl-2'>
-          <li className='text-white'>&#9679; UI must have input fields for minutes and seconds with three buttons for start, pause, reset and should also have a Timer.</li>
+          <li className='text-white'>&#9679; UI must have input fields for minutes and seconds with three buttons for start, freeze, reset and should also have a Timer.</li>
           <li className='text-white'>&#9679; Input fields should be restricted to numbers</li>
           <li className='text-white'>&#9679; If the value in the second field exceeds 60, then it should be added with the minutes. (ex: 1min and 62 secs, should be displayed in timer as 02:02)</li>
           <li className='text-white'>&#9679; When start button is clicked the start text should be changed to stop, and the timer should start to count down</li>
           <li className='text-white'>&#9679; The value in the input field should not be changing, only the counter should be changed</li>
           <li className='text-white'>&#9679; Once the countdown is over or the reset button is clicked the value in the Timer should be reseted to value in the input field</li>
-          <li className='text-white'>&#9679; If the pause button is clicked the Timer in the UI should freeze and once resume is clicked the timer should continue with delayed time</li>
+          <li className='text-white'>&#9679; If the freeze button is clicked the Timer in the UI should freeze and once resume is clicked the timer should continue with delayed time</li>
         </ul>
       </div>
     </div>
