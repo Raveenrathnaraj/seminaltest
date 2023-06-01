@@ -77,7 +77,8 @@ function page() {
           </div>
         </div>
       </div>
-      <p className='mt-6'>Create a similar layout in the Sanbox given below</p>
+      <p className='mt-6'>Create a similar layout in the Sanbox given below. The Layout must be responsive and should fit in all the screens</p>
+      <p>Toggle to mobile view to check the mobile version of the layout</p>
       <Link href={'https://codesandbox.io/s/react-new'} target='_blank' className='underline text-blue-600'>Sandbox</Link>
     </div>
   );
