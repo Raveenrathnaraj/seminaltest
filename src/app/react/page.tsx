@@ -12,8 +12,6 @@ function Page() {
   const [pausedTime, setPausedTime] = useState(0);
 
   useEffect(() => {
-
-
     return () => {
       clearInterval(timer?.current);
     };
@@ -44,11 +42,11 @@ function Page() {
     if (!isPaused) {
       let mins = Math.floor((total + passedTime) / 60);
       let sec = Math.floor((total + passedTime) % 60);
-      return (mins > 10 ? mins?.toString() : '0' + mins) + ':' + (sec > 10 ? sec?.toString() : '0' + sec);
+      return (mins > 9 ? mins?.toString() : '0' + mins) + ':' + (sec > 9 ? sec?.toString() : '0' + sec);
     } else {
       let mins = Math.floor(pausedTime / 60);
       let sec = Math.floor(pausedTime % 60);
-      return (mins > 10 ? mins?.toString() : '0' + mins) + ':' + (sec > 10 ? sec?.toString() : '0' + sec);
+      return (mins > 9 ? mins?.toString() : '0' + mins) + ':' + (sec > 9 ? sec?.toString() : '0' + sec);
     }
   };
 
@@ -71,6 +69,7 @@ function Page() {
         }}>{isPaused ? 'Unfreeze' : 'Freeze Time'}</button>
         <button className='border rounded-lg border-white p-2 w-32' onClick={() => {
           setPassedTime(0);
+          setIsPaused(false);
           clearInterval(timer.current);
           setIsStarted(false);
         }}>Reset</button>
