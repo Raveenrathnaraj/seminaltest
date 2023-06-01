@@ -16,7 +16,7 @@ function page() {
               width={'100'}
               height={'100'}
             />
-            <div className='text-left'>
+            <div className='text-left flex flex-col justify-between'>
               <h4 className='text-3xl'>Cross-chain Platform</h4>
               <p>
                 A middle ground where users from all different ecosystems come together to build cross-chain Dapps or to integrate multiple dapps on different ecosystems.
@@ -34,11 +34,13 @@ function page() {
                 width={'100'}
                 height={'100'}
               />
-              <div className='pl-3'>
-                <h3 className='text-2xl'>Cross-chain wallet</h3>
-                <p>
-                  Manage multiple chain native, non-native tokens from Link single place. Seminal blockchain  provides cross-chain services.
-                </p>
+              <div className='pl-3 flex flex-col fh justify-evenly'>
+                <div>
+                  <h3 className='text-2xl'>Cross-chain wallet</h3>
+                  <p>
+                    Manage multiple chain native, non-native tokens from Link single place. Seminal blockchain  provides cross-chain services.
+                  </p>
+                </div>
                 <Link href='/'>Learn More</Link>
               </div>
             </div>
