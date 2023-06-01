@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React, {useEffect, useRef, useState} from 'react';
 
 function Page() {
@@ -85,6 +86,8 @@ function Page() {
           <li className='text-white'>&#9679; The value in the input field should not be changing, only the counter should be changed</li>
           <li className='text-white'>&#9679; Once the countdown is over or the reset button is clicked the value in the Timer should be reseted to value in the input field</li>
           <li className='text-white'>&#9679; If the freeze button is clicked the Timer in the UI should freeze and once resume is clicked the timer should continue with delayed time</li>
+          <li className='text-white'>&#9679; Starter template for the above challenge is given in the below sandbox link</li>
+          <Link href={'https://codesandbox.io/s/seminal-react-ts-test-t5o331?file=/src/App.tsx'} target='_blank' className='underline text-blue-600'>Sandbox Template</Link>
         </ul>
       </div>
     </div>

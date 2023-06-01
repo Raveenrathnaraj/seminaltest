@@ -1,4 +1,4 @@
-import SeminalBouncingLoader from './SeminalBouncingLoader';
+import SeminalBouncingLoader from '../components/SeminalBouncingLoader';
 import React from 'react'
 
 function loading() {

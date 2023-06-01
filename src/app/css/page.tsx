@@ -4,7 +4,7 @@ import React from 'react';
 
 function page() {
   return (
-    <div className='flex items-center justify-center mt-6'>
+    <div className='flex flex-col items-center justify-center mt-6'>
       <div className='max-w-[90%] text-center'>
         <h2 className='text-4xl mb-4'>Products Seminal supports</h2>
         <div className='flex gap-3 flex-wrap md:flex-nowrap'>
@@ -77,6 +77,8 @@ function page() {
           </div>
         </div>
       </div>
+      <p className='mt-6'>Create a similar layout in the Sanbox given below</p>
+      <Link href={'https://codesandbox.io/s/react-new'} target='_blank' className='underline text-blue-600'>Sandbox</Link>
     </div>
   );
 }
