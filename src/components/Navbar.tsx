@@ -11,12 +11,12 @@ function Navbar() {
         </Link>
       </div>
       <div className='items-center hidden md:flex'>
-        <Link href={'/css'} className='mr-5'>
+        {/* <Link href={'/css'} className='mr-5'>
           <div>CSS Test</div>
         </Link>
         <Link href={'/react'}>
           <div>React Test</div>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
