@@ -86,7 +86,8 @@ function Page() {
           <li className='text-white'>&#9679; Once the countdown is over or the reset button is clicked the value in the Timer should be reseted to value in the input field</li>
           <li className='text-white'>&#9679; If the freeze button is clicked the Timer in the UI should freeze and once resume is clicked the timer should continue with delayed time</li>
           <li className='text-white'>&#9679; Starter template for the above challenge is given in the below sandbox link</li>
-          <Link href={'https://codesandbox.io/s/seminal-react-ts-test-t5o331?file=/src/App.tsx'} target='_blank' className='underline text-blue-600'>Sandbox Template</Link>
+          <Link href={'https://codesandbox.io/s/seminal-react-ts-test-t5o331?file=/src/App.tsx'} target='_blank' className='underline text-blue-600'>Sandbox Template Typescript</Link>
+          <Link href={'https://codesandbox.io/s/seminal-react-js-test-7u6p1k?file=/src/App.js'} target='_blank' className='underline text-blue-600'>Sandbox Template Javascript</Link>
         </ul>
       </div>
     </div>
