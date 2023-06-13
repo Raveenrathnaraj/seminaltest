@@ -3,10 +3,11 @@ import Link from 'next/link';
 import React, {useEffect, useRef, useState} from 'react';
 
 function Page() {
+  const timer = useRef<NodeJS.Timer>();
+  
   const [minutes, setMinutes] = useState<number | string>('');
   const [seconds, setSeconds] = useState<number | string>('');
   const [passedTime, setPassedTime] = useState(0);
-  const timer = useRef<NodeJS.Timer>();
   const [isPaused, setIsPaused] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [pausedTime, setPausedTime] = useState(0);
