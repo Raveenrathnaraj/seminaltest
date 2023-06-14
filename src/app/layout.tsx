@@ -1,9 +1,11 @@
-import Navbar from '../components/Navbar';
 import './globals.css';
-import {Inter} from 'next/font/google';
-import seminalIcon from "../../public/seminal_round.png";
 
-const inter = Inter({subsets: ['latin']});
+import { Inter } from 'next/font/google';
+import Navbar from '../components/Navbar';
+import seminalIcon from '../../public/seminal_round.png';
+import RightClickHandler from '@/components/RightClickHandler';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Seminal Frontend Test',
@@ -18,8 +20,8 @@ export const metadata = {
         height: 600,
       },
     ],
-    authors: ['Raveen'],
-    description: "Only the best can solve this challenge. Are you the best?",
+    authors: ['Raveen, Adhavakkannan'],
+    description: 'Only the best can solve this challenge. Are you the best?',
   },
   twitter: {
     title: 'Seminal Frontend Test',
@@ -31,7 +33,7 @@ export const metadata = {
       },
     ],
     creator: 'Raveen',
-    description: "Only the best can solve this challenge. Are you the best?",
+    description: 'Only the best can solve this challenge. Are you the best?',
   },
 };
 
@@ -41,12 +43,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang='en'>
+      <body className={`select-none ${inter.className}`}>
         <nav>
           <Navbar />
         </nav>
-        {children}
+        <div className='px-20'>
+          <RightClickHandler />
+          {children}
+        </div>
       </body>
     </html>
   );

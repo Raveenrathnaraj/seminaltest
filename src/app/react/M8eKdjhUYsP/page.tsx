@@ -12,6 +12,7 @@ import {
   Tooltip,
 } from 'chart.js';
 import Link from 'next/link';
+import { Transaction } from '@/settings/type';
 
 Chart.register(
   CategoryScale,
@@ -21,13 +22,6 @@ Chart.register(
   Title,
   Tooltip
 );
-
-interface Transaction {
-  reason: string;
-  amount: string;
-  type: 'Credit' | 'Debit';
-  timestamp: string;
-}
 
 const ExpenseTracker: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -133,7 +127,7 @@ const ExpenseTracker: React.FC = () => {
   const isEnabled = !transactions.length;
 
   return (
-    <div className='container mx-auto p-20'>
+    <div className='container'>
       <div className='flex justify-between items-center'>
         <h1 className='text-3xl font-bold my-4'>Expense Tracker</h1>
         <div className='text-right'>
@@ -257,7 +251,7 @@ const ExpenseTracker: React.FC = () => {
         <></>
       )}
 
-      <div className='mt-20'>
+      <div className='my-20 border rounded-lg p-4'>
         <div className='flex justify-between items-center'>
           <h2 className='text-lg font-bold mb-2'>Instructions:</h2>
           <h2 className='text-lg font-bold mb-2'>Duration: 1 hrs</h2>
@@ -297,16 +291,21 @@ const ExpenseTracker: React.FC = () => {
             transaction history is empty.
           </li>
         </ol>
-        <br />
-        <Link
-          href={
-            'https://codesandbox.io/s/fervent-mountain-xrp6pk?file=/src/App.js'
-          }
-          target='_blank'
-          className='underline text-blue-600 mt-12'
-        >
-          Sandbox Template
-        </Link>
+        <div className='mt-5'>
+          <p>
+            Starter template for the above challenge is given in the below
+            sandbox link
+          </p>
+          <Link
+            href={
+              'https://codesandbox.io/s/fervent-mountain-xrp6pk?file=/src/App.js'
+            }
+            target='_blank'
+            className='underline text-blue-600 mt-12'
+          >
+            Sandbox Template
+          </Link>
+        </div>
       </div>
     </div>
   );

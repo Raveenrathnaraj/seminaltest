@@ -1,0 +1,27 @@
+.newspaper-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: justify ;
+}
+
+.newspaper-content {
+  column-count: 2;
+  column-gap: 2rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.newspaper-content p {
+  margin-bottom: 1rem;
+}
+
+.newspaper-content h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: red;
+}
+
+.newspaper-content a {
+  color: #007bff;
+  text-decoration: underline;
+}

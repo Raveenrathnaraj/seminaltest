@@ -8,11 +8,6 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Link from 'next/link';
 
-interface Task {
-  id: number;
-  title: string;
-}
-
 const CRUDOperation = () => {
   const [tasks, setTasks] = useState([
     { id: 1, title: 'Task 1' },
@@ -72,7 +67,7 @@ const CRUDOperation = () => {
   };
 
   return (
-    <div className='container mx-auto p-20'>
+    <div className='container '>
       <h3 className='text-2xl font-bold mb-4'>Task Manager</h3>
 
       <div className='flex mb-4 items-center'>
@@ -148,7 +143,7 @@ const CRUDOperation = () => {
         ))}
       </ul>
 
-      <div className='mt-20'>
+      <div className='my-20 border rounded-lg p-4'>
         <div className='flex justify-between items-center'>
           <h2 className='text-lg font-bold mb-2'>Instructions:</h2>
           <h2 className='text-lg font-bold mb-2'>Duration: 1 hrs</h2>
@@ -169,15 +164,22 @@ const CRUDOperation = () => {
             will be permanently removed from the list.
           </li>
         </ol>
+        <div className='mt-5'>
+          <p>
+            Starter template for the above challenge is given in the below
+            sandbox link
+          </p>
+          <Link
+            href={
+              'https://codesandbox.io/s/exciting-gates-fl7m9f?file=/src/App.js'
+            }
+            target='_blank'
+            className='underline text-blue-600'
+          >
+            Sandbox Template
+          </Link>
+        </div>
       </div>
-      <br />
-      <Link
-        href={'https://codesandbox.io/s/exciting-gates-fl7m9f?file=/src/App.js'}
-        target='_blank'
-        className='underline text-blue-600 mt-12'
-      >
-        Sandbox Template
-      </Link>
     </div>
   );
 };
