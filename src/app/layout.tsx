@@ -48,9 +48,13 @@ export default function RootLayout({
         <nav>
           <Navbar />
         </nav>
-        <div className='px-20'>
-          <RightClickHandler />
-          {children}
+        <div className='flex flex-col items-center'>
+          <div className='max-w-7xl w-full px-4'>
+            <div className='mx-auto max-w-full'>
+              <RightClickHandler />
+              {children}
+            </div>
+          </div>
         </div>
       </body>
     </html>
