@@ -101,7 +101,9 @@ const BlogPage: React.FC = () => {
             sandbox link
           </p>
           <Link
-            href={''}
+            href={
+              'https://codesandbox.io/s/compassionate-mclean-rlxyp7?file=/src/App.js'
+            }
             target='_blank'
             className='underline text-blue-600 mt-12'
           >
