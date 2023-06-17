@@ -34,3 +34,9 @@ export interface Transaction {
 export interface BlogCardProps {
   post: Blog;
 }
+
+export interface Emoji {
+  name: string;
+  symbol: string;
+  keywords: string;
+}
